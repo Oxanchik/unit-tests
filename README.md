@@ -10,8 +10,60 @@
 Используя библиотеку requests напишите unit-test на верный ответ и возможные отрицательные тесты на ответы с ошибкой
 
 Пример положительных тестов:
-- Код ответа соответствует 200.
+- Код ответа соответствует 201.
 - Результат создания папки - папка появилась в списке файлов.
 
 ## Задача №3. Дополнительная (не обязательная)
 Применив selenium, напишите unit-test для авторизации на Яндексе по url: https://passport.yandex.ru/auth/
+
+
+## Инструкция по запуску проекта
+
+**1. Установите Python**
+
+Убедитесь, что у вас установлен Python 3.8+
+
+```bash
+python --version
+```
+Если Python не установлен: https://www.python.org/downloads/
+
+**2. Клонируйте репозиторий:**
+```bash
+git clone git@github.com:Oxanchik/unit_tests.git
+cd unit_tests
+```
+
+**3. Создайте и активируйте виртуальное окружение (по желанию):**
+
+Windows:
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+macOS / Linux:
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+**4. Установите зависимости:**
+```bash
+pip install -r requirements.txt
+```
+
+**5. Настройте токен Яндекс.Диска**
+```bash
+# Скопируйте файл-пример
+cp .env.example .env        # macOS/Linux
+copy .env.example .env      # Windows
+```
+
+**6. Получите токен Яндекс Диска на [Полигоне](https://yandex.ru/dev/disk/poligon/)**
+
+**7. Вставьте токен в файл `.env`**
+Откройте файл .env в любом текстовом редакторе и замените your_token_here на ваш токен:
+```bash
+YANDEX_TOKEN=y0_AgAAAAABXk3QA...
+```
