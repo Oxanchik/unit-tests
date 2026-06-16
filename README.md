@@ -54,16 +54,17 @@ pip install -r requirements.txt
 ```
 
 **5. Настройте токен, логин и пароль Яндекс.Диска**
+- **Скопируйте файл-пример**
+
 ```bash
-# Скопируйте файл-пример
 cp .env.example .env        # macOS/Linux
 copy .env.example .env      # Windows
 ```
 
-**6. Получите токен Яндекс Диска на [Полигоне](https://yandex.ru/dev/disk/poligon/)**
+- **Получите токен Яндекс Диска на [Полигоне](https://yandex.ru/dev/disk/poligon/)**
 
-**7. Вставьте данные в файл `.env`**
-Откройте файл .env в любом текстовом редакторе и замените your_token_here на ваш токен, your_test_login@yandex.ru на ваш логин, your_test_password на ваш пароль:
+- **Вставьте данные в файл `.env`**
+Откройте файл .env в любом текстовом редакторе и замените your_token_here на ваш токен, "your_test_login@yandex.ru" на ваш логин, "your_test_password" на ваш пароль:
 ```bash
 YANDEX_TOKEN=y0_AgAAAAABXk3QA...
 TEST_LOGIN="your_test_login@yandex.ru"
