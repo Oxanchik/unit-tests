@@ -70,3 +70,37 @@ YANDEX_TOKEN=y0_AgAAAAABXk3QA...
 TEST_LOGIN="your_test_login@yandex.ru"
 TEST_PASSWORD="your_test_password"
 ```
+## Пример работы
+
+Пример работы `02_test_ydisk.py`
+
+```
+============================= test session starts =============================
+collecting ... collected 3 items
+
+02_test_ydisk.py::TestYandexDiskAPI::test_01_create_folder_success 
+02_test_ydisk.py::TestYandexDiskAPI::test_02_create_folder_conflict 
+02_test_ydisk.py::TestYandexDiskAPI::test_03_create_folder_unauthorized 
+
+============================== 3 passed in 4.91s ==============================
+PASSED [ 33%]
+[OK] Папка 'TestFolder_1781723024' успешно создана и обнаружена на диске. Код ответа сервера: 201
+PASSED [ 66%]
+[OK] Корректно получена ошибка 409 при повторном создании папки: DiskPathPointsToExistentDirectoryError
+PASSED [100%]
+[OK] Корректно получена ошибка 401 при использовании неверного токена.
+
+[Cleanup] Тестовая папка 'TestFolder_1781723024' удалена.
+```
+
+Пример работы `03_test_yauth.py`
+
+```
+============================= test session starts =============================
+collecting ... collected 1 item
+
+03_test_yauth.py::TestYandexAuth::test_login_success 
+
+============================= 1 passed in 22.78s ==============================
+PASSED              [100%]✅ Успешная авторизация!
+```
